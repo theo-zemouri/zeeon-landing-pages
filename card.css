@@ -1,0 +1,60 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrage horizontal */
+  gap: 40px; /* Espace entre les cartes */
+  margin-top: 40px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #8b0000, #d4af37); /* rouge → doré */
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #bfa25a;
+}
+
+/* Effet hover dynamique */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Animation d'apparition fluide */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
